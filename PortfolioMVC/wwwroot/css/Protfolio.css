@@ -1,0 +1,262 @@
+﻿.perfil-container {
+    padding: 5px;
+    display: block;
+    text-align: center;
+}
+
+    .perfil-container h5 {
+        margin-top: 5px;
+        margin-bottom: 15px;
+    }
+
+    .perfil-container p {
+        text-align: justify;
+    }
+
+.scroll {
+    max-width: 520px;
+    margin-inline: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    mask: linear-gradient(to right, transparent, white 15%, white 85%, transparent);
+}
+
+.scroll__container {
+    display: flex;
+    gap: 10px;
+    width: max-content;
+    animation: scrollInfinito 15s linear infinite;
+}
+
+.scroll__item {
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 0px;
+    white-space: nowrap;
+}
+
+    .scroll__item i {
+        font-size: 60px;
+    }
+
+.tecnologia {
+    margin-bottom: 50px;
+}
+
+    .tecnologia h3 {
+        margin-top: 10px;
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+.experiencia,
+.projects {
+    margin-bottom: 50px;
+}
+
+    .experiencia h3,
+    .projects h3{
+        text-align: center;
+    }
+
+.container-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    color: #ffffff;
+    background-color: rgba(24,56,78);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.5);
+    width: 100%;
+    max-width: 300px;
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .card:hover,
+    .card-imagem:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .card h5 {
+        text-align: center;
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    .card p {
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+
+.imagem {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+    .imagem h3 {
+        text-align: center;
+    }
+
+.card-imagem {
+    color: #ffffff;
+    background-color: rgba(7,58,58);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.5);
+    width: 100%;
+    max-width: 300px;
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .card-imagem button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 15px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        font-size:14px;
+    }
+
+        .card-imagem button:hover {
+            background-color: #0056b3;
+        }
+
+.imagem-projeto {
+    width: 100%;
+    max-width: 300px;
+    height: 140px;
+}
+
+#footer {
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+    #footer .socials-media ul {
+        display: inline-block;
+        float: none;
+        margin: 0 0 25px 0;
+    }
+
+        #footer .socials-media ul li {
+            float: left;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+    #footer .socials-media a {
+        text-decoration: none;
+    }
+
+@keyframes scrollInfinito {
+    to {
+        transform: translateX(-50.5%);
+    }
+}
+
+
+@media screen and (max-width: 1200px) {
+    .container-card,
+    .imagem {
+        width: 100%;
+        height: 100%;
+    }
+
+    .card {
+        font-size: 90%;
+        width: 600px;
+        height: 400px;
+    }
+
+        .card h5 {
+            font-size: 16px;
+        }
+}
+
+@media screen and (max-width: 991px) {
+    .container-card {
+        width: 100%;
+        height: 100%;
+    }
+
+    .card {
+        width: 650px;
+        height: 450px;
+    }
+
+        .card h5 {
+            font-size: 16px;
+        }
+}
+
+@media screen and (max-width: 690px) {
+    .container-card {
+        width: 100%;
+        height: 100%;
+    }
+
+    .card {
+        width: 500px;
+        height: 300px;
+    }
+
+        .card h5 {
+            font-size: 18px;
+        }
+}
+
+@media screen and (max-width:525px) {
+    .container-card {
+        width: 100%;
+        height: 100%;
+    }
+
+    .card {
+        width: 450px;
+        height: 300px;
+    }
+
+        .card h5 {
+            font-size: 16px;
+        }
+}
+
+
+@media screen and (max-width: 460px) {
+
+    .card {
+        width: 400px;
+        height: 300px;
+    }
+
+        .card h5 {
+            font-size: 18px;
+        }
+}
+
+@media screen and (max-width: 415px) {
+
+    .card {
+        width: 350px;
+        height: 300px;
+        font-size: 12px;
+    }
+
+        .card h5 {
+            font-size: 18px;
+        }
+}

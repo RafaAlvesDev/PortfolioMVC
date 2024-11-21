@@ -1,0 +1,96 @@
+﻿
+.formulario {
+    margin: auto;
+    width: 100%;
+    max-width: 600px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.2);
+    align-items: center;
+    margin-top: 20px;
+}
+
+.perfil-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#github-avatar {
+    width: auto;
+    max-width: 150px;
+    height: 150px;
+    border-radius: 10%;
+}
+
+.perfil-texto {
+    display: flex;
+    flex-direction: column;
+}
+
+.saudacao, .display-4 {
+    display: block;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: left;
+}
+
+.saudacao {
+    margin-top: 0px;
+    font-size: 1.2rem;
+}
+
+.display-4 {
+    font-size: 2.9rem;
+    margin-top: -3px;
+}
+
+.descricao {
+    margin-top: 20px;
+    font-size: 1rem;
+    text-align: justify;
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.rodape a {
+    text-decoration: none;
+}
+
+.rodape i {
+    font-size: 20px;
+    margin: 0 5px;
+}
+
+.rodape .socials-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.rodape .list-unstyled {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+@media (max-width: 300px) {
+    .perfil-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #github-avatar {
+        max-width: 150px;
+    }
+
+    .display-4 {
+        font-size: 1rem;
+    }
+
+    .rodape i {
+        font-size: 24px; 
+    }
+}

@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Portfolio";
+}
+<head>
+    <link rel="stylesheet" href="~/css/Index.css" asp-append-version="true" />
+</head>
+
+<body>
+    <form class="formulario">
+        <div class="perfil-container">
+
+            <div id="github-profile">
+                <img id="github-avatar" alt="Foto de Perfil do GitHub" width="150" height="150" style="border-radius: 5%;">
+            </div>
+
+            <div class="perfil-texto">
+                <span class="saudacao">Olá,</span>
+                <h1 class="display-4">sou Rafael.</h1>
+            </div>
+        </div>
+
+        <p class="descricao">
+            Sou desenvolvedor pleno full stack apaixonado pela tecnologia e estou sempre em busca de novos desafios.
+            Acredito que a inovação é o principal impulsionador do crescimento e estou sempre procurando aprender novas linguagens,
+            frameworks e melhores práticas para criar soluções ágeis e escaláveis.
+        </p>
+
+        <p class="descricao">
+            Meu objetivo é me tornar um profissional altamente capacitado e transformar ideias em produtos digitais de excelência,
+            com o foco em otimizar processos e oferecer experiências mais intuitivas e significativas.
+        </p>
+
+        <script src="~/js/github-profile.js"></script>
+    </form>
+    <partial name="_Rodape" />
+</body>

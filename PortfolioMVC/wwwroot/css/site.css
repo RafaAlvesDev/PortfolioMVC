@@ -1,0 +1,80 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    background-color: #EEEEEE;
+    background-image: url('../imagens/Fundo.png'); /* Caminho da imagem */
+    background-size: cover; /* Redimensiona a imagem para cobrir toda a área */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita a repetição da imagem */
+    height: 100%; /* Ocupa a altura total da tela */
+    margin: 0px; /* Remove margens padrão */
+    color: #fff; /* Define a cor do texto para contraste */
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Organiza os elementos de cima para baixo */
+}
+
+.socials-media i {
+    margin-top: 10px;
+    font-size: 1.5rem; /* Aumente o valor para aumentar o tamanho dos ícones */
+    margin: 0 10px; /* Espaçamento entre os ícones */
+    color: white;
+}
+
+    .socials-media i:hover {
+        color: #0056b3;
+    }
+
+h1 {
+    color: floralwhite
+}
+
+.container-footer {
+    text-align: center;
+    color: white;
+}
+
+.perfil-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.perfil-texto {
+    display: flex;
+    flex-direction: column;
+}
+
+    .perfil-texto label {
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+    }
+
+.display-4 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+/*.container {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+*/

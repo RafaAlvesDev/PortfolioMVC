@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Contato";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/Contato.css" asp-append-version="true" />
+</head>
+<body>
+
+    <form class="formulario">
+        <h2>Formulário de Contato</h2>
+
+        <label>Nome:</label>
+        <input placeholder="Digite seu nome" type="text" required />
+
+        <label>Telefone:</label>
+        <input placeholder="Digite seu telefone" type="text" required />
+
+        <label>E-mail:</label>
+        <input placeholder="Digite seu e-mail" type="text" required />
+
+        <label>Observação:</label>
+        <textarea class="observacao" placeholder="Escreva sua mensagem" rows="3"></textarea>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+</body>
