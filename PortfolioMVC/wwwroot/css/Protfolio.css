@@ -55,7 +55,7 @@
 }
 
     .experiencia h3,
-    .projects h3{
+    .projects h3 {
         text-align: center;
     }
 
@@ -118,22 +118,36 @@
     padding: 20px;
     text-align: left;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 14px;
 }
 
-    .card-imagem button {
-        background-color: #007bff;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        padding: 10px 15px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-        font-size:14px;
+    .card-imagem h6 {
+        text-align: center;
     }
 
-        .card-imagem button:hover {
-            background-color: #0056b3;
-        }
+.button {
+    align-self: flex-start;
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+}
+
+    .button:hover {
+        color: white;
+        background-color: #0056b3;
+    }
 
 .imagem-projeto {
     width: 100%;
