@@ -31,7 +31,7 @@
 .scroll__item {
     border-radius: 8px;
     background-color: rgba(255, 255, 255, 0.9);
-    padding: 0px;
+    padding: 2px;
     white-space: nowrap;
 }
 

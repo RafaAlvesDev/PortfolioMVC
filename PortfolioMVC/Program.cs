@@ -1,7 +1,11 @@
+using PortfolioMVC.Interface;
+using PortfolioMVC.Service;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<IContatoService, ContatoService>();
 
 var app = builder.Build();
 
