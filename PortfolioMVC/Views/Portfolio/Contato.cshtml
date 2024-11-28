@@ -3,7 +3,6 @@
 }
 
 <link rel="stylesheet" href="~/css/Contato.css" asp-append-version="true" />
-<script src="~/js/Mensagem.js"></script>
 
 <body>
     <form asp-controller="Portfolio" asp-action="Contato">
@@ -11,25 +10,15 @@
             <h2>Formulário de Contato</h2>
 
             <label>Nome:<sup style="color: red;">*</sup></label>
-            <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite seu nome" />
+            <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite seu nome" required />
 
             <label>E-mail:<sup style="color: red;">*</sup></label>
-            <input type="email" class="form-control" id="email" name="email" placeholder="Digite seu e-mail" />
+            <input type="email" class="form-control" id="email" name="email" placeholder="Digite seu e-mail" required />
 
             <label>Mensagem:<sup style="color: red;">*</sup></label>
-            <textarea class="form-control" id="mensaje" name="Mensagem" rows="4"></textarea>
+            <textarea class="form-control" id="mensaje" name="Mensagem" rows="4" required></textarea>
 
-            <button type="submit" class="btn btn-primary" onclick="mostrarMensagem()">Enviar</button>
-
-            <div id="myModal" class="modal">
-                <div class="modal-content">
-                    <span class="close" onclick="fecharMensagem()">&times;</span>
-                    <h3 class="display-4">Grato pelo seu contato</h3>
-                    <p>Vou responder sua mensagem o mais brever possível.</p>
-                    <button type="submit" class="btn btn-primary" onclick="fecharMensagem()">Fechar</button>
-                </div>
-            </div>
-
+            <button type="submit" class="btn btn-primary">Enviar</button>
         </div>
     </form>
 </body>

@@ -1,4 +1,5 @@
-﻿using PortfolioMVC.Interface;
+﻿using dotenv.net;
+using PortfolioMVC.Interface;
 using PortfolioMVC.Models;
 using System.Net;
 using System.Net.Mail;
@@ -12,9 +13,16 @@ namespace PortfolioMVC.Service
         {
             try
             {
-                var caminhoArquivoXml = @"C:\Users\rafah\source\repos\EmailConfig.xml";
-                // Carregar configurações do arquivo XML externo
-                var configuracao = CarregarConfiguracaoEmail(caminhoArquivoXml);
+                DotEnv.Load();
+
+                var configuracao = new EmailConfig()
+                {
+                    SmtpServer = Environment.GetEnvironmentVariable("SMTPSERVER"),
+                    Port = int.Parse(Environment.GetEnvironmentVariable("PORT")),
+                    UserEmail = Environment.GetEnvironmentVariable("USEREMAIL"),
+                    Password = Environment.GetEnvironmentVariable("PASSWORD"),
+                    Recipient = Environment.GetEnvironmentVariable("RECIPIENT")
+                };
 
                 if (configuracao != null)
                 {
@@ -54,23 +62,6 @@ namespace PortfolioMVC.Service
             {
                 Console.WriteLine($"Erro ao enviar e-mail: {ex.Message}");
             }
-        }
-
-        private EmailConfig CarregarConfiguracaoEmail(string caminhoArquivoXml)
-        {
-            if (!File.Exists(caminhoArquivoXml))
-                throw new FileNotFoundException($"Arquivo de configuração não encontrado: {caminhoArquivoXml}");
-
-            var xml = XDocument.Load(caminhoArquivoXml);
-
-            return new EmailConfig
-            {
-                SmtpServer = xml.Root.Element("SmtpServer")?.Value,
-                Port = int.Parse(xml.Root.Element("Port")?.Value ?? "587"),
-                UserEmail = xml.Root.Element("UserEmail")?.Value,
-                Password = xml.Root.Element("Password")?.Value,
-                Recipient = xml.Root.Element("Recipient")?.Value
-            };
         }
     }
 }

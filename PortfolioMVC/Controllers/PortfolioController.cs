@@ -32,7 +32,7 @@ namespace PortfolioMVC.Controllers
         public async Task<IActionResult> Contato(ContatoViewModel contatoViewModel)
         {
             await _contatoService.Enviar(contatoViewModel);
-            return View();
+            return RedirectToAction("Obrigado");
         }
 
         public IActionResult Obrigado()
